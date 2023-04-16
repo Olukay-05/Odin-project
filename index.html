@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.cdnfonts.com/css/norse" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/roboto-condensed" rel="stylesheet">
+                
+                
+  <title>Sign-Up Form</title>
+</head>
+<body>
+  <main>
+    <div class="odin-container">
+      <img class="img1" src="https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="logo">
+      <div class="card-image">
+        <img src="./asset/odin-lined.png" alt="logo">
+        <h2>ODIN</h2>
+      </div>
+    </div>
+    <div class="form">
+      <div class="text-container">
+        <p>
+          This is not a real online service! You know you need something like this 
+          in your life to help you realize your deepest dreams.
+        </p>
+        <br>
+        <p>You <span><i>know</i></span> you want to</p>
+      </div>
+
+      <form action="#">
+        <div class="input-container">
+          <div class="left-input">
+            <h3>Let's do this!</h3>
+            <label for="firstName">FIRST NAME</label>
+            <input type="text" name="firstName" id="firstName" required>
+  
+            <label for="lastName">LAST NAME</label>
+            <input type="text" name="lastName" id="lastName" required>
+  
+            <label for="email">EMAIL</label>
+            <input type="email" name="email" id="email" required>
+            <div class="error-text"> Must be a valid email address!</div>
+          </div>
+
+          <div class="right-input">
+            <label for="tel">PHONE NUMBER</label>
+            <input type="tel" name="tel" pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$" required>
+            <div class="error-text"> Must be a valid Phone Number!</div>
+
+            <label for="password">PASSWORD</label>
+            <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" class="error" required>
+            <div class="error-text"> Must be a valid Password!</div>
+
+            <label for="confirmPassword">CONFIRM PASSWORD</label>
+            <input type="password" name="confirmPassword" id="confirmPassword" required>
+            <div class="error-text"> Password must match!</div>
+          </div>
+        </div>
+        
+
+        <button type="submit">
+          Create Account
+        </button>
+        <p class="login">Already have an account? <a href="#">Log in</a></p>
+      </form>
+    </div>
+  </main>
+<!-- 
+  <script>
+    const form = document.querySelector('form');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirmPassword');
+
+    confirmPassword.addEventListener('input', function() {
+      if (confirmPassword.value === password.value) {
+        confirmPassword.setCustomValidity('');
+      } else {
+        confirmPassword.setCustomValidity('Passwords do not match');
+      }
+    });
+
+    form.addEventListener('submit', function(event) {
+      if (password.value !== confirmPassword.value) {
+        event.preventDefault();
+      }
+    });
+  </script> -->
+</body>
+</html>
